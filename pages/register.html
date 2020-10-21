@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" href="../css/public.css" rel="stylesheet" />
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../js/public.js"></script>
+    <style type="text/css">
+        body{
+            background:#f9f9f8;
+        }
+        .wrap{
+            height:641px;
+        }
+        .wrapper{
+            width: 854px;
+            height:561px;
+            margin: 0 auto;
+            padding-bottom: 10px;
+            background:white;
+        }
+        .logo{
+            width: 49px;
+            height: 48px;
+            margin: 0 auto;
+            display: block;
+            padding-bottom:40px;
+        }
+        .wrapper h4{
+            font-size: 30px;
+            font-weight: normal;
+            color: #333;
+            line-height: 1.5;
+            text-align:center;
+        }
+        .wrapper .main{
+            margin:0 auto;
+            width:332px;
+            height:228px;
+            padding-top:30px;
+        }
+        .wrapper p:nth-of-type(1){
+            padding-bottom: 5px;
+            color: #333;
+            font-weight: normal;
+            font-size:14px;
+        }
+        .wrapper .main .tel{
+            width:332px;  
+            height:40px;
+            border: 1px solid #e8e8e8;
+            line-height: 40px;
+            cursor: pointer;
+            color: #555;
+            display:flex;
+        }
+        .wrapper .select p{
+            width:276px;                                             
+            padding-left:14px;
+            border-right: 1px solid #e8e8e8;
+        }
+        .wrapper .select i{
+            background:url(../images/register_04.jpg) no-repeat center ;
+            float:right;
+            width:16px;
+            margin:0 auto;
+        }
+        .main .select_text{
+            margin-bottom: 15px;
+            color: #666;
+            line-height: 20px;
+            font-size: 14px;
+        }
+        .wrapper p:nth-of-type(2){
+            padding-bottom: 5px;
+            color: #333;
+            font-weight: normal;
+            font-size:14px;
+        }
+        .main .send{
+            width:329px;
+            height:40px;
+            border: 1px solid #e8e8e8;
+            line-height:42px;
+            position:relative;
+        }
+        .main .send .send_left{
+            width:54px;
+            height:40px;
+            padding-left:14px;
+            border-right: 1px solid #e8e8e8;
+            background:url(../images/register_07.jpg) no-repeat 50px center;
+            color: #555;
+            cursor: pointer;
+            font-size:14px
+        }
+        .main .send input:nth-of-type(1){
+            outline:none;
+            border:0;
+            height:20px;
+            width:220px;
+            position:absolute;
+            right:10px;
+            top:0;
+            padding:10px;
+            color: #333;
+        }
+        .main .send input:nth-of-type(2){
+            background:#ff6700;
+            margin-top: 30px;
+            color: #fff;
+            width: 330px;
+            height: 42px;
+            
+            line-height: 42px;
+            text-align: center;
+            font-size: 14px;
+            display: block;
+            cursor: pointer;
+            outline: none;
+            border:0;
+        }
+        .main .send input:nth-of-type(2):hover{
+            background: #ff936a;
+        }
+        .msg{
+            text-align:center;
+            margin-top:90px;
+            color: #9d9d9d;
+            font-size: 14px;
+        }
+        .msg a{
+            color: #333;
+            font-weight: bold;
+        }
+        .bottom{
+            height:80px;
+            padding-top:10px;
+            color: #757575; 
+            font-size:14px;
+        }
+        .bottom ul{
+            text-align:center;
+        }
+        .bottom li{
+            display:inline-block;   
+        }
+        .bottom ul a{
+            color: #757575;
+            font-size:14px;
+            padding:0 10px;   
+        }
+        .bottom ul li a:hover{
+            color:#333;
+        }
+        .bottom a.on{
+            color: #333;
+        }
+        .bottom .bottom_info{
+            text-align:center;
+            padding:10px;
+        }
+        .bottom .bottom_info a{
+            color:#757575;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="wrapper">
+            <div class="logo"><a href=""><img src="../images/register_03.jpg" alt=""></a></div>
+            <h4>注册小米帐号</h4>
+            <div class="main">
+                <form action="">
+                    <p>手机号码</p>
+                    <!-- <div class="select">
+                        
+                    </div> -->
+                    <input class="tel" type="tel" placeholder="请输入手机号码">
+                    <div class="select_text">成功注册帐号后，国家/地区将不能被修改</div>
+                    <p>密码</p>
+                    <div class="send">
+                        <div class="send_left">
+                            +86
+                        </div>
+                        <input class="password" type="text" placeholder="请输入密码">
+                        <input type="button" value="立即注册" >
+                    </div>
+                </form>
+                
+            </div>
+            <div class="msg">
+                已阅读并同意：小米 
+                <a href="">用户协议</a>
+                <a href=""> 隐私政策 </a>
+            </div>
+        </div>
+        <div class="bottom">
+            <ul>
+                <li><a href="" class="on">简体</a>|</li>
+                <li><a href="">繁体</a>|</li>
+                <li><a href="">English</a>|</li>
+                <li><a href="">常见问题</a>|</li>
+                <li><a href="">隐私政策</a></li>
+            </ul>
+            <p class="bottom_info">
+                小米公司版权所有-京ICP备10046444-
+                <a href="">
+                    <span><img src="../images/login_16.jpg" alt="" /></span>
+                    京公网安备11010802020134号</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        $('.send').children().eq(2).click(function(){
+            $.ajax({
+                url:"../interface/model_uesr/register.php",
+                type:'GET',
+                async:true,
+                data:{
+                    id:$('.tel').val(),
+                    password:$('.password').val()
+                },
+                success:function(res){
+                    if(res.code){
+                        alert('注册成功');
+                        location.href="./login.html";
+                    }
+                },
+                dataType:'json'
+            })
+        })
+    </script>
+</body>
+</html>

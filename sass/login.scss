@@ -1,0 +1,121 @@
+.head{
+    height:98px;
+    margin:25px 0 0 110px;
+}
+a.now{
+    color: #f56600;
+}
+.banner{
+    position:relative;
+}
+.login{
+    height:556px;
+    width:410px;
+    position:absolute;
+    background:white;
+    top:32px;
+    right:109px;
+}
+
+.login .display_1{
+    text-align:center;
+}
+.login .display_1 img{
+    margin-top:100px;
+}
+.login .display_1 p{
+    font-size:14px;
+    color:#666;
+    margin-top:10px;
+}
+.login .display_1 p span{
+    color:#f56600;
+}
+.tabs_pannel{
+    height:32px;
+    margin:27px 0 24px 66px;
+}
+.tabs_link{
+    font-size:24px;
+    text-align:center;
+    color: #666;
+}
+.line{
+    border: 1px solid #e0e0e0;
+    margin: 0 35px 0 42px;
+}
+.tabs_con input{
+    width:333px;
+    height:50px;
+    border: 1px solid #e0e0e0;
+    margin:0 0 14px 31px;
+    padding-left:15px;
+}
+.tabs_con .sub{
+    width:348px;
+    background:#f56600;
+    color:white;
+    cursor:pointer;
+    margin-top:9px;
+}
+.display .zhuce a:hover{
+    color:#ff6700;
+}
+.other_pannel{
+    text-align:center;  
+    cursor:pointer;
+    font-size:14px;
+    margin-bottom:30px;
+}
+.other_pannel .duanxin a{
+    color:#ff6700;
+    
+}
+.zhuce{
+    color: #999;
+    text-align:center;
+    font-size: 14px;
+}
+.zhuce a{
+    color: #999;
+}
+.other_login_type{
+    width:346px;
+    padding-top:143px;
+    margin:0 auto;
+}
+.other_login_type a{
+    margin:0 17px 0;
+}
+.other_login_type a:nth-of-type(1){
+    margin-left:55px;
+}
+.bottom{
+    height:80px;
+    padding-top:100px;
+    color: #757575; 
+}
+.bottom ul{
+    text-align:center;
+}
+.bottom li{
+    display:inline-block;   
+}
+.bottom ul a{
+    color: #757575;
+    font-size:14px;
+    padding:0 10px;   
+}
+.bottom ul li a:hover{
+    color:#333;
+}
+.bottom a.on{
+    color: #333;
+}
+.bottom .bottom_info{
+    text-align:center;
+    padding:10px;
+}
+.bottom .bottom_info a{
+    color:#757575;
+}

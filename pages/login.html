@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米账号</title>
+    <link type="text/css" href="../css/public.css" rel="stylesheet" />
+    <link type="text/css" href="../css/login.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="head">
+        <div class="logo">
+            <a href="./index.html"><img src="../images/login_01.jpg" alt=""></a>          
+        </div>
+    </div>
+    <div class="banner">
+        <img src="../images/login_02.jpg" alt="">
+        <!-- 表单 -->
+        <div class="login" id="login">
+            <div class="tabs_pannel" id="tabs_pannel">
+                <a href="javascript:;" class="tabs_link now" id="a">账号登陆</a>
+                <span class="line"></span>
+                <a href="javascript:;" class="tabs_link" id="b">扫码登陆</a>
+            </div>
+            <div class="display" id="display_0" >
+                <div class="tabs_con">
+                    <form action="">
+                        <div class="tabs_input">
+                            <input id="input" type="text" class="input" placeholder="邮箱/手机号码/小米ID" />
+                        </div>
+                        <div lcass="tabs_pwd">
+                            <input id="pwd" type="password" class="pwd" placeholder="密码">
+                        </div>      
+                        <div>
+                            <input type="button" id="sub" class="sub" value="登录" />
+                        </div>            
+                    </form>
+                </div>
+                <div class="other_pannel">
+                    <span id="duanxin" class="duanxin"><a href="./register.html">手机短信登录/注册</a></span>               
+                </div>
+                <div id="zhuce" class="zhuce">
+                        <a href="./register.html">立即注册</a>
+                        <span>|</span>
+                        <a href="">忘记密码？</a>
+                </div>
+                <div class="other_login_type">
+                    <a href=""><img src="../images/login_03.jpg" alt="" /></a>
+                    <a href=""><img src="../images/login_05.jpg" alt="" /></a>
+                    <a href=""><img src="../images/login_07.jpg" alt="" /></a>
+                    <a href=""><img src="../images/login_09.jpg" alt="" /></a>
+                </div>
+            </div>
+            <div class="display_1" id="display_1" style="display:none;">
+                <img src="../images/login_10.jpg" alt="">
+                <p>使用<span>小米商城APP</span>扫一扫</p>
+                <p>小米手机可打开「设置」>「小米帐号」扫码登录</p>
+            </div>
+        </div>
+        <!-- 表单结束 -->
+    </div>
+    <div class="bottom">
+        <ul>
+            <li><a href="" class="on">简体</a>|</li>
+            <li><a href="">繁体</a>|</li>
+            <li><a href="">English</a>|</li>
+            <li><a href="">常见问题</a>|</li>
+            <li><a href="">隐私政策</a></li>
+        </ul>
+        <p class="bottom_info">
+            小米公司版权所有-京ICP备10046444-
+            <a href="">
+                <span><img src="../images/login_16.jpg" alt="" /></span>
+                京公网安备11010802020134号</a>
+        </p>
+    </div>
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../js/public.js"></script>
+    <script>
+        var a=$id('a');
+        var b=$id('b');
+        var display_0=$id('display_0');
+        var display_1=$id('display_1');
+        b.onclick=function(){
+            a.className="tabs_link";
+            b.className="tabs_link now";
+            display_0.style.display="none";
+            display_1.style.display="block";
+        a.onclick=function(){
+            this.className="tabs_link now";
+            b.className="tabs_link";
+            display_0.style.display="block";
+            display_1.style.display="none";
+        }
+        }       
+    </script>
+
+    <!-- 连接数据库 -->
+    <script>
+        $('.tabs_con form').children().eq(2).click(function(){
+            $.ajax({
+                url:'../interface/model_uesr/login.php',
+                type:'GET',
+                async:true,
+                data:{
+                    id:$('#input').val(),
+                    password:$('#pwd').val()
+                },
+                success:function(res){
+                    console.log(res)
+                    if(res.code){
+                        alert('登录成功');
+                        location.href="./index.html";
+                    }else{
+                        alert('账号或密码错误');
+                    }
+                },
+                dataType:'json'
+            })
+        })
+    </script>
+</body>
+</html>
